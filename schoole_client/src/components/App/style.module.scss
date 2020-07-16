@@ -1,0 +1,10 @@
+@import "../variables.scss";
+
+.main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-content: center;
+  background-color: $primaryColorLight;
+  padding: 0 5%;
+}

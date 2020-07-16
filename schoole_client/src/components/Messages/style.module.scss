@@ -1,0 +1,46 @@
+@import "../mixins.scss";
+
+.box {
+  @include mainRoutedComponent;
+}
+
+.messages_table {
+  @include table;
+  .table_header {
+    @include tableRow;
+    height: 5vh;
+    .date {
+      @include descriptiveTableCell;
+    }
+    .person {
+      @include descriptiveTableCell;
+    }
+    .title {
+      @include descriptiveTableCell;
+    }
+  }
+  .table_item {
+    @include tableRow;
+    .date {
+      @include descriptiveTableCell;
+    }
+    .person {
+      @include informativeTableCell;
+    }
+    .title {
+      @include informativeTableCell;
+      font-weight: 500;
+      justify-content: flex-start;
+      text-indent: 1vw;
+    }
+  }
+  .date {
+    width: 10%;
+  }
+  .person {
+    width: 20%;
+  }
+  .title {
+    width: 50%;
+  }
+}

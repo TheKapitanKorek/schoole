@@ -1,0 +1,148 @@
+@import "./variables";
+
+@mixin flexRowRight {
+  box-sizing: border-box;
+  padding: 0 5vw;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@mixin mainRoutedComponent {
+  position: relative;
+  width: 100%;
+  margin-top: 4vh;
+  box-sizing: border-box;
+  background: #f4f4f4;
+  border: 1px solid $borderColor;
+  .label {
+    box-sizing: border-box;
+    background-color: $primaryColorDark;
+    display: inline-block;
+    padding: 0.8vh 3vw 0.8vh 1.5vw;
+    border-radius: 0 0 10vw 0;
+    color: $primaryColorLight;
+    .desc {
+      color: $primaryColor;
+      margin-right: 1vw;
+    }
+  }
+}
+
+@mixin dropdown {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  position: absolute;
+  right: 1vw;
+  top: 0.4vh;
+  border: 1px solid $borderColor;
+  height: 3vh;
+  .dropdown_toggler {
+    cursor: pointer;
+    height: 3vh;
+    background: $primaryColor;
+    width: 100%;
+    border: none;
+    margin: 0;
+    padding: 0;
+    border-radius: 0;
+    &:active {
+      border: 0;
+      padding: 0;
+    }
+    .dropdown_desc {
+      white-space: nowrap;
+      text-align: center;
+      box-sizing: border-box;
+      display: inline-block;
+      width: 80%;
+    }
+    .dropdown_symbol {
+      background-color: $primaryColorDark;
+      color: $primaryColorLight;
+      text-align: center;
+      box-sizing: border-box;
+      display: inline-block;
+      width: 20%;
+      line-height: 3vh;
+    }
+  }
+  .dropdown_menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-size: 0.9em;
+    border: 1px solid $borderColor;
+    .dropdown_menu_item {
+      line-height: 1.6em;
+      background-color: $primaryColorLight;
+      border-bottom: 0.5px solid $primaryColorDark;
+      color: $primaryColorDark;
+      cursor: pointer;
+    }
+  }
+}
+
+@mixin table {
+  width: 97%;
+  margin: 2vh 1.5%;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid $borderColor;
+}
+
+@mixin tableRow {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+}
+
+@mixin descriptiveTableCell {
+  box-sizing: border-box;
+  display: flex;
+  background-color: $primaryColor;
+  color: $primaryColorDark;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid $borderColor;
+}
+
+@mixin informativeTableCell {
+  box-sizing: border-box;
+  display: flex;
+  background-color: $primaryColorLight;
+  color: $primaryColorDark;
+  justify-content: center;
+  align-items: center;
+  border: 0.5px solid $borderColor;
+}
+
+@mixin mark {
+  justify-content: center;
+  display: flex;
+  color: black;
+  height: 2vh;
+  width: 2vh;
+  border: 0.5px solid $borderColor;
+  font-size: 0.9em;
+  font-weight: 800;
+  margin-left: 0.3vw;
+}
+@mixin lesson {
+  justify-content: center;
+  display: flex;
+  height: 3vh;
+  width: 3vh;
+  line-height: 3vh;
+  border: 0.5px solid $borderColor;
+  font-size: 1.1em;
+  margin-left: 0.3vw;
+}

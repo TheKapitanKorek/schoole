@@ -1,0 +1,30 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.container {
+  @include flexRowRight;
+  background: $primaryColor;
+  padding: 0 8vw;
+  .element {
+    box-sizing: border-box;
+    height: 10vh;
+    background-color: $primaryColor;
+    width: 5vw;
+    border: 0;
+    border-right: 1px solid $borderColor;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    color: $primaryColorDark;
+    .icon {
+      background-color: blue;
+      height: 8vh;
+      box-sizing: border-box;
+    }
+    .text {
+      box-sizing: border-box;
+      height: 20%;
+      text-align: center;
+    }
+  }
+}

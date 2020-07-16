@@ -1,0 +1,61 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.nav {
+  display: flex;
+}
+
+.container {
+  @include flexRowRight;
+  width: 80vw;
+  background-color: $primaryColorDark;
+  height: 5vh;
+  .element {
+    line-height: 5vh;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 2vw;
+    cursor: pointer;
+    color: $textColorLight;
+    .dropdown {
+      position: absolute;
+    }
+  }
+}
+
+.logo_container {
+  background-color: $primaryColorDark;
+  padding-left: 5vw;
+  width: 20vw;
+  display: flex;
+  height: 5vh;
+  .logo {
+    height: 100%;
+  }
+}
+
+.dropdown {
+  width: 0;
+  height: 0;
+  .dropdown_list {
+    right: 5vw;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    width: 10vw;
+    border: 1px solid $borderColor;
+    .dropdown_list_element {
+      height: 5vh;
+      background-color: $primaryColorLight;
+      border-bottom: 0.5px solid $borderColor;
+      text-decoration: none;
+      color: $primaryColorDark;
+      &:hover {
+        background-color: $primaryColor;
+      }
+    }
+  }
+}

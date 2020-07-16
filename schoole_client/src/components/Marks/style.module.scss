@@ -1,0 +1,110 @@
+@import "../mixins.scss";
+
+.box {
+  @include mainRoutedComponent;
+}
+
+.dropdown {
+  @include dropdown;
+  width: 10vw;
+}
+.marks_table {
+  @include table;
+  .marks_table_header {
+    @include tableRow;
+    height: 5vh;
+    .subj {
+      @include descriptiveTableCell;
+    }
+    .marks {
+      @include descriptiveTableCell;
+    }
+    .avg {
+      @include descriptiveTableCell;
+    }
+    .final {
+      @include descriptiveTableCell;
+    }
+    .combined_avg {
+      @include descriptiveTableCell;
+    }
+    .combined_final {
+      @include descriptiveTableCell;
+    }
+  }
+  .marks_table_item {
+    @include tableRow;
+    .subj {
+      @include informativeTableCell;
+    }
+    .marks {
+      @include informativeTableCell;
+      justify-content: flex-start;
+    }
+    .avg {
+      @include informativeTableCell;
+    }
+    .final {
+      @include informativeTableCell;
+    }
+    .combined_avg {
+      @include informativeTableCell;
+    }
+    .combined_final {
+      @include informativeTableCell;
+    }
+  }
+
+  //COMMON STYLES
+  .subj {
+    width: 10%;
+  }
+  .marks {
+    width: 25%;
+    .mark {
+      @include mark;
+    }
+  }
+  .avg {
+    width: 5%;
+  }
+  .final {
+    width: 5%;
+  }
+  .combined_avg {
+    width: 10%;
+  }
+  .combined_final {
+    width: 10%;
+  }
+}
+
+//MARK COLORS
+
+.sml_bad {
+  background-color: #fbdce5;
+}
+.med_bad {
+  background-color: #fa759c;
+}
+.big_bad {
+  background-color: #ff2062;
+}
+.sml_avg {
+  background-color: #fff0bd;
+}
+.med_avg {
+  background-color: #ffda5b;
+}
+.big_avg {
+  background-color: #ffcd20;
+}
+.sml_good {
+  background-color: #bbffcc;
+}
+.med_good {
+  background-color: #4aff77;
+}
+.big_good {
+  background-color: #16fd50;
+}

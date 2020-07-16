@@ -1,3 +1,4 @@
 schoole_client/node_modules
 schoole_server/node_modules
-schoole_server/environment_variables
+schoole_server/environment_variables.js
+schoole_server/config

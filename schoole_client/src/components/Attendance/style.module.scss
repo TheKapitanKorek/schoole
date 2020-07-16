@@ -1,0 +1,93 @@
+@import "../mixins.scss";
+@import "../variables.scss";
+
+$sml_table_width: 40%;
+
+.box {
+  @include mainRoutedComponent;
+}
+.attendance_table {
+  @include table;
+  .table_header {
+    @include tableRow;
+    height: 5vh;
+    .date {
+      @include descriptiveTableCell;
+    }
+    .lesson {
+      @include descriptiveTableCell;
+    }
+    .absence {
+      width: $sml_table_width;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      .absence_header {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: #a1c6cd;
+        color: $primaryColorDark;
+        height: 50%;
+        text-align: center;
+        border: 0.5px solid $borderColor;
+      }
+      .absence_types {
+        box-sizing: border-box;
+        width: 100%;
+        background-color: $primaryColor;
+        color: $primaryColorDark;
+        height: 50%;
+        display: flex;
+        flex-direction: row;
+        .absence_type {
+          box-sizing: border-box;
+          text-align: center;
+          width: 25%;
+          height: 100%;
+          border: 0.5px solid $borderColor;
+        }
+      }
+    }
+  }
+  .table_item {
+    @include tableRow;
+    height: 4vh;
+    .date {
+      @include descriptiveTableCell;
+    }
+    .lesson {
+      @include informativeTableCell;
+      justify-content: flex-start;
+    }
+    .absence_number {
+      @include informativeTableCell;
+      width: #{$sml_table_width/4};
+    }
+  }
+
+  .date {
+    width: 10%;
+  }
+  .lesson {
+    width: 50%;
+    .lesson_number {
+      @include lesson;
+    }
+  }
+  .present {
+    background-color: #f8f8f8;
+    color: #bcd3d7;
+  }
+  .lesson_absence {
+    background-color: #ff2062;
+    color: #18515b;
+  }
+  .lesson_excused_absence {
+    background-color: #7bff9c;
+    color: #18515b;
+  }
+  .exempt {
+    background-color: #b6b6b6;
+    color: #18515b;
+  }
+}
